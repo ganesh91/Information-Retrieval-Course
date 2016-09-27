@@ -10,13 +10,13 @@ Question 1:
 Number of Documents in the corpus:
 
 Following are the statistics of the corpus using standard Analyser,
-
+```
 Total number of documents in the corpus:84474
 Size of the vocabulary for this field:-1
 Number of tokens for this field:24769551
 Number of postings for this field:16806814
 Size of the vocabulary for this field (Counted):219685
-
+```
 This number may vary because of following pre-processing steps,
 1. Since SAX parser doesn't recognize &, a python program is used to pre-process files to replace & with &amp;
 This program is available in the directory above current directory at [Folder](https://github.com/ganesh91/Information-Retrieval-Course/tree/master/Assignments/HW%201/corpus) named replace amp.py
