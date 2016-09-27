@@ -32,4 +32,37 @@ IndexComparison.java uses generateIndex.java and overloads its prepareIndexWrite
 
 | Tokenizer | Tokenization Applied | No.of Tokens | Stemming | Stop Words Removed | No.of Words in Dictionary |
 |-----------|----------------------|--------------|----------|---------------------|--------------------------|
-|KeywordAnalyzer|
+|KeywordAnalyzer| No, uses whole field as single token | 84474 | No | No | 83517 |
+|SimpleAnalyzer| Yes | 34797587 | No | No | 163408 |
+|StopAnalyzer| Yes | 24397068 | No | Yes | 163375 |
+|StandardAnalyzer| Yes | 24769551 | Yes | Yes | 219685|
+
+The unformatted output of the program is as follows,
+
+```
+----Standard Analyzer-------
+Total number of documents in the corpus:84474
+Size of the vocabulary for this field:-1
+Number of tokens for this field:24769551
+Number of postings for this field:16806814
+Size of the vocabulary for this field (Counted):219685
+----Keywords Analyzer-------
+Total number of documents in the corpus:84474
+Size of the vocabulary for this field:-1
+Number of tokens for this field:84474
+Number of postings for this field:84474
+Size of the vocabulary for this field (Counted):83517
+----Simple Analyzer-------
+Total number of documents in the corpus:84474
+Size of the vocabulary for this field:-1
+Number of tokens for this field:34797587
+Number of postings for this field:17761253
+Size of the vocabulary for this field (Counted):163408
+----Stop Analyzer-------
+Total number of documents in the corpus:84474
+Size of the vocabulary for this field:-1
+Number of tokens for this field:24397068
+Number of postings for this field:15963567
+Size of the vocabulary for this field (Counted):163375
+```
+
